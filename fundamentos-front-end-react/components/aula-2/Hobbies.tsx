@@ -1,4 +1,4 @@
-const hobbies = ["Assistir Filmes", "Familia", "Esportes"];
+const hobbies = ["Assistir Filmes", "Familia", "Esportes", "Viajar"];
 
 export const Hobbies = () => {
   const [hobbyPreferido, ...outrosHobbies] = hobbies;
