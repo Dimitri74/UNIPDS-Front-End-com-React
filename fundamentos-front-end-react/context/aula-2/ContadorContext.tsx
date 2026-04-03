@@ -26,15 +26,12 @@ export default function ContadorProvider({
 }: {
   children: ReactNode;
 }) {
-  const [contador, setContador] = useState<ContadorType>(null);
+  const [contador, setContador] = useState<ContadorType>(() => {
+    if (typeof window === "undefined") return null;
 
-  useEffect(() => {
-    const contadorLocalStorage = localStorage.getItem("contador") ?? 0;
-
-    if (contadorLocalStorage !== null) {
-      setContador(+contadorLocalStorage);
-    }
-  }, []);
+    const contadorLocalStorage = localStorage.getItem("contador");
+    return contadorLocalStorage === null ? 0 : +contadorLocalStorage;
+  });
 
   useEffect(() => {
     if (contador !== null) {

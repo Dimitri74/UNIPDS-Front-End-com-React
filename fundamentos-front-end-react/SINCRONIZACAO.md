@@ -1,144 +1,81 @@
-# Sincronização de Projetos - Resumo de Alterações
+# Sincronizacao de Projetos - Resumo de Alteracoes
 
-## ✅ Sincronização Concluída
+## Status Geral
 
-O projeto 2 (`UNIPDS-MÓDULO -REACT/fundamesntos-front-end-react`) foi sincronizado com sucesso com o projeto 1 (`ESTUDOS/modulo3-fundamentos-front-end-react`) para a **Aula 2**.
+Sincronizacao concluida entre:
 
----
+- Projeto original: `C:\Users\marcu\workspace\ESTUDOS\modulo3-fundamentos-front-end-react`
+- Projeto destino: `C:\Users\marcu\workspace\UNIPDS\UNIPDS-MODULO -REACT\fundamentos-front-end-react`
 
-## 📦 Estrutura Criada
+Escopo atualizado no destino:
 
-### Diretórios Adicionados:
-```
-app/
-├── aula-2/
-│   ├── layout.tsx
-│   ├── nivel-0/
-│   │   ├── page.tsx
-│   │   └── [name]/
-│   │       └── page.tsx
-│   ├── nivel-1/
-│   │   └── page.tsx
-│   └── nivel-2/
-│       ├── layout.tsx
-│       └── page.tsx
-├── globals.css
-├── types.ts
-├── layout.tsx (ATUALIZADO)
-└── page.tsx (NOVO)
+- Aula 2: mantida
+- Aula 3: sincronizada
+- Aula 4: sincronizada
 
-components/
-└── aula-2/
-    ├── Button.tsx
-    ├── Contador.tsx
-    ├── ContadorGlobal.tsx
-    ├── Hobbies.tsx
-    ├── Imagem.tsx
-    ├── MeuNome.tsx
-    └── ValorContadorGlobal.tsx
+## Conteudo Sincronizado (Aulas 3 e 4)
 
-context/
-└── aula-2/
-    └── ContadorContext.tsx
+### Novos caminhos adicionados no destino
+
+```text
+app/aula-3/
+app/(aula-4)/
+components/aula-3/
+context/aula-4/
+lib/aula-4/
+middleware.ts
 ```
 
----
+### Dependencias adicionadas
 
-## 📝 Arquivos Modificados
+`dependencies`:
 
-### 1. **package.json**
-- ✅ Nome corrigido: `fundamesntos-front-end-react` → `fundamentos-front-end-react`
-- ✅ Script lint corrigido: `eslint` → `next lint`
-- ✅ Adicionado `@eslint/eslintrc` nas devDependencies
-- ✅ Mantidas versões do Next.js 16.2.1 e React 19.2.4
+- `jose@^6.0.11`
+- `js-cookie@^3.0.5`
+- `swr@^2.3.3`
 
-### 2. **postcss.config.mjs**
-- ✅ Atualizado para usar sintaxe array moderna do Tailwind CSS 4
+`devDependencies`:
 
-### 3. **app/layout.tsx**
-- ✅ Adicionado import de `Metadata` do Next.js
-- ✅ Adicionadas fontes do Google (Geist Sans e Geist Mono)
-- ✅ Importado `./globals.css`
-- ✅ Estrutura HTML com metadata e classes de fontes
+- `@types/js-cookie@^3`
 
-### 4. **app/page.tsx**
-- ✅ Criada página inicial com links de navegação para os níveis de aula-2
+## Ajustes Tecnicos Aplicados
 
----
+- Script de lint ajustado para Next 16:
+    - de `next lint`
+    - para `eslint .`
+- Correcao de lint `react-hooks/set-state-in-effect` em:
+    - `context/aula-2/ContadorContext.tsx`
+    - `context/aula-4/AuthContext.tsx`
 
-## 🎯 Conteúdo da Aula 2
+## Validacoes Executadas
 
-A aula 2 contém os seguintes conceitos:
+Comandos executados no destino:
 
-### **Nível 0**: Introdução a Componentes
-- Uso de Props e TypeScript
-- Componente `MeuNome` com dados pessoais
-- Renderização condicional de arrays (`Hobbies`)
-- Componente de Imagem do Next.js
-- Rota dinâmica com parâmetro `[name]`
+- `npm install` -> sucesso
+- `npm run lint` -> sucesso
+- `npm run build` -> sucesso
 
-### **Nível 1**: React Hooks (useState e useEffect)
-- Componente `Contador` com estado local
-- Uso de `useState` para gerenciar estado
-- Uso de `useEffect` para efeitos colaterais
-- Monitoramento de dependências
+Rotas das aulas 3 e 4 confirmadas no build:
 
-### **Nível 2**: Context API e Estado Global
-- Componente `ContadorContext` para estado global
-- Provider com localStorage (persistência)
-- Componentes `ContadorGlobal` e `ValorContadorGlobal` consumindo contexto
-- Compartilhamento de estado entre componentes
+- `/aula-3/client-side`
+- `/aula-3/community-libraries`
+- `/aula-3/server-side`
+- `/login`
+- `/dashboard`
+- `/test-client`
+- `/test-server`
+- `/unauthorized`
+- `/api/auth`
+- `/api/protected`
 
----
+## Observacao
 
-## 🔧 Dependências Utilizadas na Aula 2
+O build mostra aviso deprecado do Next 16 para `middleware.ts` (recomendacao futura: migrar para `proxy`). Isso nao bloqueia execucao nem build no estado atual.
 
-A aula 2 utiliza **apenas as dependências padrão**:
-- `react@19.2.4`
-- `react-dom@19.2.4`
-- `next@16.2.1`
-- `tailwindcss@^4` (para styling)
+## Status Final
 
-**Nenhuma dependência adicional é necessária** para a aula 2. Os conceitos cobertos (Props, Hooks, Context API) são nativos do React.
-
----
-
-## 📊 Diferenças entre Projetos
-
-| Aspecto | Projeto 1 (ESTUDOS) | Projeto 2 (UNIPDS) |
-|--------|-------------------|-------------------|
-| Estrutura | `src/` diretório | Sem `src/` (App Router direto) |
-| Gerenciador | Yarn 4.9.2 | npm |
-| Next.js | 15.3.3 | 16.2.1 ✅ (mais recente) |
-| React | 19.1.0 | 19.2.4 ✅ (mais recente) |
-| Pacotes Aula 2 | React + Context API | React + Context API ✅ (idêntico) |
-| Pacotes Adicionais* | jose, js-cookie, swr | Não (apenas aula 2) |
-
-*Pacotes adicionais são para aulas posteriores (3 e 4)
-
----
-
-## 🚀 Como Executar
-
-```bash
-# Instalar dependências
-npm install
-
-# Iniciar servidor de desenvolvimento
-npm run dev
-
-# Acessar
-http://localhost:3000
-```
-
-Navegue pelos links na página inicial para acessar os diferentes níveis da aula 2.
-
----
-
-## ✨ Status Final
-
-✅ **Projeto 2 sincronizado com sucesso**
-✅ **Conteúdo da aula 2 completo**
-✅ **Imports ajustados para novo padrão**
-✅ **Todas as dependências configuradas**
-✅ **Pronto para desenvolvimento**
+- ✅ Aula 2 OK
+- ✅ Aula 3 OK
+- ✅ Aula 4 OK
+- ✅ Pacotes das aulas 3 e 4 instalados
+- ✅ Lint e build validados

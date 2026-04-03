@@ -15,10 +15,10 @@ const Page = async ({ params }: PageProps) => {
 
   return (
     <div className="grid gap-y-4">
-      <MeuNome name={name} age={51} birthDate={new Date(1974, 8, 6)} />
+      <MeuNome name={name} age={51} birthDate={new Date(1974, 7, 6)} />
       <Hobbies />
       <div>
-        <p>Gosto de:</p>
+        <p>Tecnologia:</p>
         <Imagem />
       </div>
       <Link className="underline" href="/aula-2/nivel-0">

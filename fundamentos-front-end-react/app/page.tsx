@@ -23,7 +23,7 @@ export default function Home() {
         </ol>
       </main>
       <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <p>Fundamentos de Front-End com React - 2025</p>
+        <p>Fundamentos de Front-End com React - 2026</p>
       </footer>
     </div>
   );
